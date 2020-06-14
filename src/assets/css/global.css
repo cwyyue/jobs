@@ -1,0 +1,96 @@
+input,
+input:focus {
+    border: 0;
+    outline: none;
+}
+
+.container {
+    max-width: 1440px;
+    min-width: 1080px;
+    margin: auto;
+}
+
+.top {
+    transition: 0.5s ease;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.top .ivu-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(88, 88, 88);
+    font-size: 20px;
+}
+
+.top:hover .ivu-icon {
+    color: #3370ff;
+}
+
+
+/* 组件button  ivu-btn-primary */
+
+.ivu-btn-primary {
+    background: #3370ff;
+    border: 1px solid #3370ff;
+}
+
+.ivu-btn-primary:hover {
+    background: #82a7fc;
+    border: 1px solid #82a7fc;
+}
+
+.clearfix::before,
+.clearfix::after {
+    display: table;
+    content: "";
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+ul li {
+    list-style: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #bbbfc4;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #bbbfc4;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #bbbfc4;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #bbbfc4;
+}
+
+
+/* 多选框间距 */
+
+.ivu-checkbox {
+    margin-right: 10px;
+}
+
+.ivu-select-prefix i {
+    vertical-align: middle;
+}
