@@ -33,7 +33,8 @@
             <h3>联系方式</h3>
             <p>电话：13281020373</p>
             <p>邮箱：527202897@qq.com</p>
-            <p>GitHub:<a href="https://github.com/cwyyue">https://github.com/cwyyue</a></p>
+            <p>GitHub:<a href="https://github.com/cwyyue/jobs"
+                 target="_blank">https://github.com/cwyyue/jobs</a></p>
 
           </div>
         </div>
@@ -53,7 +54,7 @@ export default {
   },
   mounted () {
     this.$nextTick(() => {
-      this.$parent.Loading(500)
+      this.$parent.Loading(3000)
     })
   }
 

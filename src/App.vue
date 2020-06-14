@@ -110,7 +110,32 @@ export default {
   },
   methods: {
     ...mapMutations(['setLoading']),
-    ...mapActions(['Loading'])
+    ...mapActions(['Loading']),
+    loadImages (urlArr) { //参数 图片地址数组
+      if (urlArr.length <= 0) return;
+      let i = 0,
+        timer = null,
+        len = urlArr.length,
+        load = (url) => {
+          if (i < len) {
+            const image = new Image()
+            url = url.replace('assets/images', 'img')
+            image.src = url
+            console.log(url)
+            timer = setInterval(() => {
+              if (image.complete) {
+                console.log('complete')
+                clearInterval(timer)
+                load(urlArr[i++])
+              }
+            }, 80)
+          } else {
+            this.setLoading(false);
+          }
+        }
+      load(urlArr[i])
+    }
+
   }, components: {
     Loading
   }

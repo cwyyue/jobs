@@ -5,6 +5,7 @@
              ref="banner">
       <div class="video-container">
         <video src="../assets/gongquhunjian_1080.min.mp4"
+               @canplaythrough="()=>{ this.$parent.setLoading(false);}"
                autoplay
                muted
                loop
@@ -548,8 +549,8 @@ export default {
   },
   mounted () {
     // 在项目加载完成之后初始化wow
+
     this.$nextTick(() => {
-      this.$parent.Loading(500)
       let wow = new WOW({
         live: false
       })

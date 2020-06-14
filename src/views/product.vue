@@ -150,8 +150,10 @@ export default {
     }
   },
   mounted () {
+    // let imgList = this.productList.map(item => item.backImg);
     this.$nextTick(() => {
-      this.$parent.Loading(500)
+      this.$parent.Loading(3000)
+      // this.$parent.loadImages(imgList);
     })
     document.addEventListener('wheel', this.throttle(this.pageScroll, 1500))
   },

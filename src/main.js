@@ -10,7 +10,7 @@ import './assets/css/global.css';
 
 
 // 配置axios
-axios.defaults.baseURL = 'http://127.0.0.1:3001/'
+axios.defaults.baseURL = 'http://39.104.117.45:3001/'
     // 拦截请求
 axios.interceptors.request.use(config => {
     return config;
