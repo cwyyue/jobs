@@ -1,6 +1,6 @@
 <template>
   <div class="byte-img">
-    <img :src='"../assets/images/"+imgPath+""'>
+    <img :src="img">
 
     <span :class="{wow:flag, slideOutRight:flag}"
           data-wow-duration="0.5s"></span>
@@ -15,18 +15,26 @@
 export default {
   data () {
     return {
-      flag: true
+      flag: true,
+      img: require("../assets/images/" + this.imgPath + "")
     }
+  },
+  mounted () {
+    this.img = require("../assets/images/" + this.imgPath + "");
+    console.log(this.img);
+
   },
   props: {
     imgPath: String,
     color: String
   },
   watch: {
-    imgPath () {
+    imgPath (value) {
       this.flag = false;
+      this.img = require("../assets/images/" + value + "");
       setTimeout(() => {
         this.flag = true;
+
       }, 1)
     }
 

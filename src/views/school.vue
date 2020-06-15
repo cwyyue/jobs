@@ -54,7 +54,8 @@ export default {
   },
   mounted () {
     this.$nextTick(() => {
-      this.$parent.Loading(3000)
+      this.$parent.loadImages(['me.png'])
+      // this.$parent.Loading(3000)
     })
   }
 

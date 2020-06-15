@@ -5,7 +5,8 @@
              ref="banner">
       <div class="video-container">
         <video src="../assets/gongquhunjian_1080.min.mp4"
-               @canplaythrough="()=>{ this.$parent.setLoading(false);}"
+               :style="{visibility:videoFlag?'visible':'hidden'}"
+               @canplaythrough="()=>videoFlag=true"
                autoplay
                muted
                loop
@@ -428,7 +429,7 @@
                    v-for="i in 3"
                    :key="i">
               <a href="javascirpt:;">
-                <img src="..\assets\images\xiongdianavarta.png">
+                <img src="../assets/images/xiongdianavarta.png">
                 <h2 class="wow fadeInUp"
                     data-wow-offset="50">体验最极致的成就感</h2>
                 <p class="wow fadeInUp"
@@ -469,6 +470,7 @@ import CurtainImg from '../components/curtainImg'
 export default {
   data: function () {
     return {
+      videoFlag: false,
       searchText: "",
       byteStyleChose: "bytestyle1clear.png",
       byteStyleColor: "rgb(219, 236, 243)",
@@ -549,7 +551,9 @@ export default {
   },
   mounted () {
     // 在项目加载完成之后初始化wow
-
+    let imglist = this.byteStyleList.map(item => item.img)
+    imglist.push('video-poster')
+    this.$parent.loadImages(imglist);
     this.$nextTick(() => {
       let wow = new WOW({
         live: false
@@ -614,8 +618,8 @@ export default {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: url("../assets/images/video-poster.png");
-    background-size: 100% 100%;
+    background: url("../assets/images/video-poster.png") no-repeat center;
+    background-size: cover;
   }
   .main {
     width: 100%;

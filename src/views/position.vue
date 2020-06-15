@@ -120,8 +120,8 @@ export default {
   },
   mounted () {
     this.$nextTick(() => {
-      // this.$parent.loadImages(['../assets/images/joblistbanner2x.jpg'])
-      this.$parent.Loading(3000)
+      this.$parent.loadImages(['joblistbanner2x.jpg'])
+      // this.$parent.Loading(3000)
     })
     this.$refs.offsetParent
     this.pos = this.$refs.searchContain.offsetTop + 60;//+顶部导航栏

@@ -113,15 +113,22 @@ export default {
     ...mapActions(['Loading']),
     loadImages (urlArr) { //参数 图片地址数组
       if (urlArr.length <= 0) return;
+
       let i = 0,
         timer = null,
         len = urlArr.length,
         load = (url) => {
           if (i < len) {
-            const image = new Image()
-            url = url.replace('assets/images', 'img')
-            image.src = url
+            const image = new Image();
+            // url = url.replace(/\//g, "\\");
+            // 区分是名字数组还是路径数组
             console.log(url)
+            if (url[0] == '/') {
+              image.src = url;
+            } else {
+              image.src = require("./assets/images/" + url);
+            }
+            console.log(url);
             timer = setInterval(() => {
               if (image.complete) {
                 console.log('complete')
