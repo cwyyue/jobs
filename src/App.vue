@@ -111,6 +111,9 @@ export default {
   methods: {
     ...mapMutations(['setLoading']),
     ...mapActions(['Loading']),
+    show () {
+      this.setLoading(true)
+    },
     loadImages (urlArr) { //参数 图片地址数组
       if (urlArr.length <= 0) return;
 
@@ -145,6 +148,9 @@ export default {
 
   }, components: {
     Loading
+  }, watch: {
+    // 如果路由有变化，会再次执行该方法
+    "$route": "show"
   }
 
 }
