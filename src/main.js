@@ -1,16 +1,17 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import animated from 'animate.css'
-import axios from 'axios'
-import 'view-design/dist/styles/iview.css';
+// import animated from 'animate.css'
+// import axios from 'axios'
+// import 'view-design/dist/styles/iview.css';
 import './components/design.js'
 import './assets/css/global.css';
 
 
 // 配置axios
-axios.defaults.baseURL = 'http://39.104.117.45:3001/'
+// 'http://39.104.117.45:3001'
+axios.defaults.baseURL = 'http://localhost:3001'
     // 拦截请求
 axios.interceptors.request.use(config => {
     return config;
@@ -21,7 +22,7 @@ axios.interceptors.response.use(config => {
 })
 Vue.prototype.$http = axios;
 // 使用animated动画插件
-Vue.use(animated);
+// Vue.use(animated);
 
 
 

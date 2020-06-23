@@ -4,9 +4,9 @@
     <section class="banner"
              ref="banner">
       <div class="video-container">
+        <!--   :style="{visibility:videoFlag?'visible':'hidden'}" -->
         <video src="../assets/gongquhunjian_1080.min.mp4"
-               :style="{visibility:videoFlag?'visible':'hidden'}"
-               @canplaythrough="()=>videoFlag=true"
+               @canplaythrough="()=>$parent.setLoading(false)"
                autoplay
                muted
                loop
@@ -549,11 +549,13 @@ export default {
       oldY: 0
     }
   },
+  created () {
+    let listimg = this.byteStyleList.map(item => item.img)
+    this.$parent.loadImages(listimg);
+  },
   mounted () {
     // 在项目加载完成之后初始化wow
-    let imglist = this.byteStyleList.map(item => item.img)
-    imglist.push('video-poster')
-    this.$parent.loadImages(imglist);
+
     this.$nextTick(() => {
       let wow = new WOW({
         live: false

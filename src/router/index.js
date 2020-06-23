@@ -1,9 +1,9 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+// import Vue from 'vue'
+// import VueRouter from 'vue-router'
 import Index from '../views/index.vue'
-Vue.use(VueRouter)
-    // import { LoadingBar } from 'view-design';
-    // Vue.use(LoadingBar);
+// Vue.use(VueRouter)
+// import { LoadingBar } from 'view-design';
+// Vue.use(LoadingBar);
 
 
 const routes = [{
@@ -40,6 +40,8 @@ const routes = [{
 ]
 
 const router = new VueRouter({
+        linkActiveClass: 'on',
+        mode: 'history',
         routes
     })
     // router.beforeEach((to, from, next) => {

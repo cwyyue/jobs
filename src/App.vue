@@ -33,7 +33,6 @@
 
     <Loading :flag="isLoading" />
     <router-view />
-
     <!-- 底部 -->
     <footer v-if="$route.name!=='Product'&&$route.name!=='School'">
       <Row class="container">
@@ -105,6 +104,7 @@
 import { mapState, mapMutations, mapActions, mapGetters } from 'vuex'
 import Loading from './components/loading'
 export default {
+
   computed: {
     ...mapState(['headerClass', 'isLoading']),
   },
@@ -116,34 +116,25 @@ export default {
     },
     loadImages (urlArr) { //参数 图片地址数组
       if (urlArr.length <= 0) return;
-
       let i = 0,
         timer = null,
-        len = urlArr.length,
-        load = (url) => {
-          if (i < len) {
-            const image = new Image();
-            // url = url.replace(/\//g, "\\");
-            // 区分是名字数组还是路径数组
-            console.log(url)
-            if (url[0] == '/') {
-              image.src = url;
-            } else {
-              image.src = require("./assets/images/" + url);
-            }
-            console.log(url);
-            timer = setInterval(() => {
-              if (image.complete) {
-                console.log('complete')
-                clearInterval(timer)
-                load(urlArr[i++])
-              }
-            }, 80)
-          } else {
-            this.setLoading(false);
-          }
+        len = urlArr.length;
+      const image = Array.from(new Array(len), (x, index) => {
+        x = new Image();
+        console.log('预加载', x, index)
+        if (urlArr[index][0] == '/') {
+          x.src = urlArr[index];
+        } else {
+          x.src = require("./assets/images/" + urlArr[index]);
         }
-      load(urlArr[i])
+        return x;
+      });
+      //第一张加载好就撤 其他的慢慢加载
+      image[0].onload = () => {
+        this.setLoading(false);
+      }
+
+
     }
 
   }, components: {

@@ -149,12 +149,11 @@ export default {
       ]
     }
   },
-  mounted () {
+  created () {
     let imgList = this.productList.map(item => item.backImg);
-    this.$nextTick(() => {
-      // this.$parent.Loading(3000)
-      this.$parent.loadImages(imgList);
-    })
+    this.$parent.loadImages(imgList);
+  },
+  mounted () {
     document.addEventListener('wheel', this.throttle(this.pageScroll, 1500))
   },
   destroyed () {

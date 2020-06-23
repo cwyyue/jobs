@@ -2,8 +2,9 @@
   <div :class="{loading:true,fade:!flag}">
     <div class="container">
       <h1>本项目由西华大学 陈婉月制作</h1>
+      <div>为保证较好的呈现效果，每个页面第一次加载时间可能较长</div>
+      <div>拼命加载中，请耐心等待~...</div>
 
-      <div>拼命加载中...</div>
       <Icon type="ios-snow"
             size=50
             class="demo-spin-icon-load"
@@ -52,7 +53,7 @@ export default {
   width: 100vw;
   height: 100vh;
   background: #fff;
-  z-index: 9;
+  z-index: 99;
   animation: forwards;
   text-align: center;
   display: flex;

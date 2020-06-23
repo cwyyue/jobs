@@ -52,11 +52,8 @@ export default {
       flag: false
     }
   },
-  mounted () {
-    this.$nextTick(() => {
-      this.$parent.loadImages(['me.png'])
-      // this.$parent.Loading(3000)
-    })
+  created () {
+    this.$parent.loadImages(['me.png'])
   }
 
 }

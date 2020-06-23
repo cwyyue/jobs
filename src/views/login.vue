@@ -9,10 +9,7 @@
 <script>
 export default {
   mounted () {
-    this.$nextTick(() => {
-      // this.$parent.setLoading(false);
-      this.$parent.Loading(500)
-    })
+    this.$parent.Loading(500)
   }
 
 }

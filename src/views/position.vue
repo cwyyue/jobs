@@ -118,11 +118,10 @@ export default {
       jobMore: ""
     }
   },
+  created () {
+    this.$parent.loadImages(['joblistbanner2x.jpg'])
+  },
   mounted () {
-    this.$nextTick(() => {
-      this.$parent.loadImages(['joblistbanner2x.jpg'])
-      // this.$parent.Loading(3000)
-    })
     this.$refs.offsetParent
     this.pos = this.$refs.searchContain.offsetTop + 60;//+顶部导航栏
     window.addEventListener('scroll', this.pageScroll);
@@ -169,8 +168,8 @@ export default {
   width: 100%;
   min-width: 1080px;
   height: 340px;
-  background: url("../assets/images/joblistbanner2x.jpg") center;
-  background-size: 100% 100%;
+  background: url("../assets/images/joblistbanner2x.jpg") top center;
+  background-size: cover;
   h1 {
     text-align: center;
     color: #fff;
@@ -225,7 +224,7 @@ export default {
   // 吸顶样式
   .containTop {
     position: fixed;
-    z-index: 999;
+    z-index: 98;
     height: 80px;
     top: 0;
     left: 0;
