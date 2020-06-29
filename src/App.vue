@@ -6,7 +6,7 @@
             ref="header">
       <div class="hd-container">
         <div class="logo">
-          <h3>字节跳动<small> | 招聘</small></h3>
+          <h3>JOBS<small> | 招聘</small></h3>
         </div>
         <div class="nav">
           <Menu mode="horizontal"
@@ -39,22 +39,23 @@
         <Col :lg="8"
              :md="{span:24}">
         <div class="logo">
-          <h3>字节跳动<small> | 招聘</small>
+          <h3>JOBS<small> | 招聘</small>
           </h3>
         </div>
-        <p>本项目由西华大学陈婉月制作 仿字节跳动招聘网站</p>
-        <p>诚心制作 报以最高的敬意，若有冒犯之处请您海涵，谢谢~</p>
+        <p>本项目由陈婉月制作</p>
+        <p>本网页主要注重视觉特效，交互体验，同时我也注重后台，团队效率开发</p>
+
         </Col>
         <Col :lg="{span:4}"
              :md="{span:24}">
-        <dl>联系我们</dl>
+        <dl>希望您能联系我</dl>
         <dt><a href="javascript:;">电话:13281020373</a></dt>
         <dt><a href="javascript:;">邮箱:527202897@qq.com</a></dt>
         </Col>
         <Col :lg="{span:4}"
              :md="{span:24}">
         <dl>企业官网</dl>
-        <dt><a href="javascript:;">字节跳动</a></dt>
+        <dt><a href="javascript:;">JOBS招聘</a></dt>
         </Col>
         <Col :lg="{span:8}"
              :md="{span:24}">

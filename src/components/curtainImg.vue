@@ -1,5 +1,5 @@
 <template>
-  <div class="byte-img">
+  <div class="jobs-img">
     <img :src="img">
 
     <span :class="{wow:flag, slideOutRight:flag}"
@@ -61,7 +61,7 @@ span {
 .slideOutRight-after-enter {
   transition: 0.5s;
 }
-.byte-img {
+.jobs-img {
   position: relative;
   overflow: hidden;
   line-height: 0;

@@ -5,7 +5,7 @@
              ref="banner">
       <div class="video-container">
         <!--   :style="{visibility:videoFlag?'visible':'hidden'}" -->
-        <video src="../assets/gongquhunjian_1080.min.mp4"
+        <video src="../assets/index.mp4"
                @canplaythrough="()=>$parent.setLoading(false)"
                autoplay
                muted
@@ -17,8 +17,8 @@
       <div class="main">
         <div class="search-box">
           <div class="title">
-            <h1 class="title-ch">和优秀的人 做有挑战的事</h1>
-            <p class="title-en">JOIN BYTEDANCE</p>
+            <h1 class="title-ch">月出惊山鸟 时鸣春涧中</h1>
+            <p class="title-en">WELCOME JOBS</p>
           </div>
           <div class="contain">
             <input type="text"
@@ -72,7 +72,7 @@
             <h1 class="title-bg">OUR MISSION</h1>
           </div>
           <p class="wow fadeInUp"
-             data-wow-offset="50">截至目前，字节跳动产品已覆盖超过 150 个国家和地区，75 个语种</p>
+             data-wow-offset="50">截至目前，我们的产品已覆盖超过 150 个国家和地区，75 个语种</p>
           <ul class="product-list clearfix">
             <template>
               <li v-for="(item,i) in productList"
@@ -142,18 +142,18 @@
                style="top: 500px; right:-30px; transform:  scale(0.8) rotateZ(-8deg);opacity:0.1;"></div>
         </div>
         <!-- 内容 -->
-        <!-- 字节范 -->
+        <!-- 1 -->
         <article class="container">
           <div class="title wow fadeInUp"
                data-wow-offset="50">
             <h1 class="title-text"
-                style="text-align:left">字节范</h1>
+                style="text-align:left">JOBS文化</h1>
             <h1 class="title-bg"
-                style="left:0;transform: translate(0, -50%);">BYTESTYLE</h1>
+                style="left:0;transform: translate(0, -50%);">JOBSSTYLE</h1>
           </div>
           <p class="wow fadeInUp"
              data-wow-offset="50"
-             style="text-align:left">字节范是字节跳动企业文化的重要组成部分，是我们共同认可的行为准则</p>
+             style="text-align:left">美好品德是企业文化的重要组成部分，是我们共同认可的行为准则</p>
         </article>
         <div class="byte-show">
           <div class="byte-img">
@@ -179,14 +179,14 @@
           </div>
 
         </div>
-        <!-- 字节生活 -->
+        <!-- JOBS生活 -->
         <article class="container">
           <div class="title wow fadeInUp"
                data-wow-offset="50">
             <h1 class="title-text"
-                style="text-align:left;margin-top:150px">字节生活</h1>
+                style="text-align:left;margin-top:150px">JOBS生活</h1>
             <h1 class="title-bg"
-                style="left:0;transform: translate(0, -50%);">BYTELIFE</h1>
+                style="left:0;transform: translate(0, -50%);">JOBSLIFE</h1>
           </div>
           <div class="byte-show">
             <div class="byte-box">
@@ -242,15 +242,15 @@
                 <div class="title wow fadeInUp"
                      data-wow-offset="50">
                   <h1 class="title-text"
-                      style="text-align:left">关注每一位<br>ByteDancer 的成长</h1>
+                      style="text-align:left">关注每一位<br>员工 的成长</h1>
                   <h1 class="title-bg bg-num"
                       style="">02</h1>
                 </div>
                 <Divider />
                 <p class="wow fadeInUp"
-                   data-wow-offset="50">字节跳动拥有较为完善的职业发展体系，充分贴近年轻员工追求自我发展的定位，为员工提供具有针对性和差异化的培训项目</p>
+                   data-wow-offset="50">我们拥有较为完善的职业发展体系，充分贴近年轻员工追求自我发展的定位，为员工提供具有针对性和差异化的培训项目</p>
                 <p class="wow fadeInUp"
-                   data-wow-offset="50">设立专门的“人才发展”部门，与各业务部门协同推出领导力培养项目跃计划（Jump Program）、研发新员工培训项目 Bootcamp、海外员工培训计划 NBO（New Bytedancer Orientation）、校招生培训项目舞计划（Dance Program）等</p>
+                   data-wow-offset="50">设立专门的“人才发展”部门，与各业务部门协同推出领导力培养项目跃计划（Jump Program）、研发新员工培训项目 Bootcamp、海外员工培训计划 NBO（New Orientation）、校招生培训项目舞计划（Dance Program）等</p>
               </div>
 
             </div>
@@ -291,7 +291,7 @@
                 <h2 class="wow fadeInUp"
                     data-wow-offset="50">多样的健康关怀</h2>
                 <p class="wow fadeInUp"
-                   data-wow-offset="50">年度体检，免费健身房和康体娱乐中心，“字节心晴”心理关怀福利，帮助大家健康快乐地工作和生活</p>
+                   data-wow-offset="50">年度体检，免费健身房和康体娱乐中心，心理关怀福利，帮助大家健康快乐地工作和生活</p>
               </div>
 
             </div>
@@ -337,7 +337,7 @@
                 <h2 class="wow fadeInUp"
                     data-wow-offset="50">欢乐有趣的家庭活动日</h2>
                 <p class="wow fadeInUp"
-                   data-wow-offset="50">请家人来看看 ByteDancer 们每天创造成绩的地方</p>
+                   data-wow-offset="50">请家人来看看 我们 每天创造成绩的地方</p>
               </div>
 
             </div>
@@ -366,9 +366,9 @@
                 </div>
                 <Divider />
                 <h2 class="wow fadeInUp"
-                    data-wow-offset="50">头条寻人 科技向善</h2>
+                    data-wow-offset="50">助力寻人 科技向善</h2>
                 <p class="wow fadeInUp"
-                   data-wow-offset="50">“头条寻人”是一个面向全国的公益寻人项目。基于庞大的用户量，“头条寻人”根据走失人员的走失位置，回溯其有可能出现的地点，精确地将走失信息推送给该位置附近的用户。每一位打开定位和弹窗功能的用户，都有可能参与到寻人的公益活动中，帮助失散家庭团圆。截至 2020 年 1 月 8 日，“头条寻人”已经帮助 12301 个家庭团圆，最快找到走失者仅用时 60 秒</p>
+                   data-wow-offset="50">“寻人”是一个面向全国的公益寻人项目。基于庞大的用户量，“寻人”根据走失人员的走失位置，回溯其有可能出现的地点，精确地将走失信息推送给该位置附近的用户。每一位打开定位和弹窗功能的用户，都有可能参与到寻人的公益活动中，帮助失散家庭团圆。截至 2020 年 1 月 8 日，“寻人”已经帮助 12301 个家庭团圆，最快找到走失者仅用时 60 秒</p>
 
               </div>
 
@@ -383,9 +383,9 @@
             <div class="byte-box">
               <div class="byte-content">
                 <h2 class="wow fadeInUp"
-                    data-wow-offset="50">抖音助力文旅扶贫</h2>
+                    data-wow-offset="50">产品助力文旅扶贫</h2>
                 <p class="wow fadeInUp"
-                   data-wow-offset="50">通过字节跳动在流量倾斜、人才培训、产品扶持和抖音认证的四个方面投入及运营，帮助国家级贫困县的特色文旅资源打造品牌，提升拉动当地文旅品牌影响力并持续带动相关产业的经营发展。截至目前，“山里 DOU 是好风光”已落地实施河南栾川、山西永和、四川甘孜稻城亚丁等项目</p>
+                   data-wow-offset="50">通过我们在流量倾斜、人才培训、产品扶持和产品认证的四个方面投入及运营，帮助国家级贫困县的特色文旅资源打造品牌，提升拉动当地文旅品牌影响力并持续带动相关产业的经营发展。截至目前，“山里 DOU 是好风光”已落地实施河南栾川、山西永和、四川甘孜稻城亚丁等项目</p>
               </div>
 
             </div>
@@ -420,7 +420,7 @@
           <div class="title wow fadeInUp"
                data-wow-offset="50">
             <h1 class="title-text">员工故事</h1>
-            <h1 class="title-bg">BYTEDANCER STORY</h1>
+            <h1 class="title-bg">JOBSWORKER STORY</h1>
           </div>
           <Row class="story-list"
                :gutter="20">
@@ -433,8 +433,8 @@
                 <h2 class="wow fadeInUp"
                     data-wow-offset="50">体验最极致的成就感</h2>
                 <p class="wow fadeInUp"
-                   data-wow-offset="50">熊典
-                  <Divider type="vertical" />抖音 - iOS</p>
+                   data-wow-offset="50">员工
+                  <Divider type="vertical" />JOBS - iOS</p>
                 <p class="content wow fadeInUp"
                    data-wow-offset="50">公司没有让我们把所有时间都用来完成目标，仍然给大家很多时间，去做与业务没有直接关联的技术研究，大家都能停下脚步思考更多问题。
                 </p>
@@ -476,37 +476,37 @@ export default {
       byteStyleColor: "rgb(219, 236, 243)",
       productList: [
         {
-          ico: 'Faceu',
-          title: 'Faceu激萌'
+          ico: 'icon',
+          title: '产品1'
         }, {
-          ico: 'gogokid',
-          title: 'GoGoKid'
+          ico: 'icon',
+          title: '产品2'
         }, {
-          ico: 'xigua',
-          title: '西瓜视频'
+          ico: 'icon',
+          title: '产品3'
         }, {
-          ico: 'feishu',
-          title: '飞书'
+          ico: 'icon',
+          title: '产品4'
         }, {
-          ico: 'rectangle',
-          title: '今日头条'
+          ico: 'icon',
+          title: '产品5'
         }, {
-          ico: 'touyin',
-          title: '抖音短视频'
+          ico: 'icon',
+          title: '产品6'
         },
         {
-          ico: 'fanqie',
-          title: '番茄小说'
+          ico: 'icon',
+          title: '产品7'
         }, {
-          ico: 'dongchedi',
-          title: '懂车帝'
+          ico: 'icon',
+          title: '产品8'
         }, {
-          ico: 'pipixia',
-          title: '皮皮虾'
+          ico: 'icon',
+          title: '产品9'
         },
         {
-          ico: 'qingyan',
-          title: '轻颜相机'
+          ico: 'icon',
+          title: '产品10'
         },
       ],
       byteStyleList: [

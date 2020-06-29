@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="banner">
-      <h1>和优秀的人，做有挑战的事</h1>
+      <h1>从现在开始，加入我们吧</h1>
       <div :class="{contain:true, containTop:flag}"
            ref="searchContain">
         <div class="search-box">
